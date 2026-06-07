@@ -264,19 +264,15 @@ function loadMemory(){
     const photo =
     document.getElementById("memoryPhoto");
 
+    photo.src =
+    CONFIG.photos[currentMemory];
+
     photo.style.animation = "none";
 
-    photo.style.opacity = "0";
-
-    setTimeout(() => {
-        photo.src = CONFIG.photos[currentMemory];
-        photo.style.opacity = "1";
-    }, 300);
-
-    void photo.offsetWidth; // force reflow
+    void photo.offsetWidth;
 
     photo.style.animation =
-    "photoTransition 4s linear";
+    "photoTransition 4s linear forwards";
 
     createMemoryFlowers();
 }
@@ -658,7 +654,7 @@ function createPetals(){
 
         petal.innerHTML = "🌸";
 
-        flower.style.left =
+        petal.style.left =
         Math.random() * 100 + "vw";
 
         petal.style.fontSize =
