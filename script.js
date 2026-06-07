@@ -260,6 +260,7 @@ function startMemories(){
 }
 
 function loadMemory(){
+    console.log("Loading photo:", currentMemory);
 
     const photo =
     document.getElementById("memoryPhoto");
@@ -268,9 +269,7 @@ function loadMemory(){
     CONFIG.photos[currentMemory];
 
     photo.style.animation = "none";
-
     void photo.offsetWidth;
-
     photo.style.animation =
     "photoTransition 4s linear forwards";
 
