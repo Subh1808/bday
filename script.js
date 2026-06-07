@@ -393,13 +393,25 @@ function cutCake(){
 
     if(!cakeCut){
 
-        document.getElementById("wholeCake").style.display = "none";
+        const cake =
+        document.getElementById("wholeCake");
 
-        document
+        cake.style.transition = "0.5s";
+        cake.style.transform = "scale(1.15)";
+
+        setTimeout(() => {
+
+            cake.style.display = "none";
+
+            document
             .querySelectorAll(".cake-piece")
-            .forEach(piece => piece.classList.remove("hidden"));
+            .forEach(piece =>
+                piece.classList.remove("hidden")
+            );
 
-        createConfetti();
+            createConfetti();
+
+        }, 500);
 
         cakeCut = true;
         return;
