@@ -276,7 +276,7 @@ function loadMemory(){
     void photo.offsetWidth; // force reflow
 
     photo.style.animation =
-    "photoTransition 6s linear";
+    "photoTransition 4s linear";
 
     createMemoryFlowers();
 }
