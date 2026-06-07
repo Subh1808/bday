@@ -235,6 +235,8 @@ let slideshowInterval;
 
 function startMemories(){
 
+    clearInterval(slideshowInterval);
+
     currentMemory = 0;
 
     showPage("memoryPage");
@@ -246,19 +248,15 @@ function startMemories(){
         currentMemory++;
 
         if(currentMemory >= CONFIG.photos.length){
-
             clearInterval(slideshowInterval);
-
             openBalloonPage();
-
             return;
         }
 
         loadMemory();
 
-    }, 4000); // change every 4 seconds
+    }, 4000);
 }
-
 function loadMemory(){
     console.log("Loading photo:", currentMemory);
 
@@ -271,7 +269,7 @@ function loadMemory(){
     photo.style.animation = "none";
     void photo.offsetWidth;
     photo.style.animation =
-    "photoTransition 4s linear forwards";
+    "photoTransition 3.5s linear forwards";
 
     createMemoryFlowers();
 }
