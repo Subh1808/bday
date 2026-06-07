@@ -269,7 +269,7 @@ function loadMemory(){
     photo.style.animation = "none";
     void photo.offsetWidth;
     photo.style.animation =
-    "photoTransition 3.5s linear forwards";
+    "photoTransition 4s linear forwards";
 
     createMemoryFlowers();
 }
