@@ -554,18 +554,17 @@ button:hover{
 }
 
 /* Expanded circle with rotation */
+.p1{ transform:translate(0,-110px) rotate(-8deg); }
 
-.p1{ transform:translate(0,-110px) rotate(-20deg); }
+.p2{ transform:translate(95px,-55px) rotate(6deg); }
 
-.p2{ transform:translate(95px,-55px) rotate(35deg); }
+.p3{ transform:translate(95px,55px) rotate(-5deg); }
 
-.p3{ transform:translate(95px,55px) rotate(80deg); }
+.p4{ transform:translate(0,110px) rotate(4deg); }
 
-.p4{ transform:translate(0,110px) rotate(140deg); }
+.p5{ transform:translate(-95px,55px) rotate(-6deg); }
 
-.p5{ transform:translate(-95px,55px) rotate(220deg); }
-
-.p6{ transform:translate(-95px,-55px) rotate(300deg); }
+.p6{ transform:translate(-95px,-55px) rotate(8deg); }
 
 .party-background{
 
