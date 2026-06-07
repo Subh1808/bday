@@ -550,15 +550,22 @@ button:hover{
 .cake-piece{
     position:absolute;
     font-size:70px;
-    transition:1s ease;
+    transition:0.8s ease;
 }
 
-.p1{ transform:translate(0,-90px); }
-.p2{ transform:translate(78px,-45px); }
-.p3{ transform:translate(78px,45px); }
-.p4{ transform:translate(0,90px); }
-.p5{ transform:translate(-78px,45px); }
-.p6{ transform:translate(-78px,-45px); }
+/* Expanded circle with rotation */
+
+.p1{ transform:translate(0,-110px) rotate(-20deg); }
+
+.p2{ transform:translate(95px,-55px) rotate(35deg); }
+
+.p3{ transform:translate(95px,55px) rotate(80deg); }
+
+.p4{ transform:translate(0,110px) rotate(140deg); }
+
+.p5{ transform:translate(-95px,55px) rotate(220deg); }
+
+.p6{ transform:translate(-95px,-55px) rotate(300deg); }
 
 .party-background{
 
