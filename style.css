@@ -1,0 +1,1069 @@
+/* ====================================
+   RESET
+==================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:
+    "Poppins",
+    "Segoe UI",
+    sans-serif;
+}
+
+/* ====================================
+   BODY
+==================================== */
+
+body{
+    background:
+    linear-gradient(
+        135deg,
+        #ffd6f5,
+        #ffe5ec,
+        #d9f4ff
+    );
+
+    color:white;
+}
+
+/* ====================================
+   PAGE SYSTEM
+==================================== */
+
+.page{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100vh;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    animation:
+    fadePage .8s ease;
+}
+
+.page.active{
+    display:flex;
+}
+
+.hidden{
+    display:none !important;
+}
+
+@keyframes fadePage{
+
+    from{
+        opacity:0;
+        transform:scale(1.02);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* ====================================
+   GLASS CARD
+==================================== */
+
+.glass-card{
+
+    width:90%;
+    max-width:500px;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter:
+    blur(15px);
+
+    box-shadow:
+    0 8px 30px
+    rgba(0,0,0,.15);
+
+    z-index:10;
+}
+
+.glass-card h1{
+
+    color:white;
+
+    margin-bottom:15px;
+
+    font-size:2rem;
+}
+
+.subtitle{
+
+    margin-bottom:20px;
+
+    color:#fff;
+}
+
+/* ====================================
+   INPUT
+==================================== */
+
+input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    margin-top:10px;
+
+    font-size:1rem;
+
+    text-align:center;
+}
+
+#errorText{
+
+    margin-top:15px;
+
+    color:#ffb3c7;
+
+    font-weight:600;
+}
+
+/* ====================================
+   BUTTONS
+==================================== */
+
+button{
+
+    margin-top:20px;
+
+    padding:
+    12px 28px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        45deg,
+        #ff69b4,
+        #ff8fd3
+    );
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:
+    translateY(-3px)
+    scale(1.05);
+
+    box-shadow:
+    0 8px 20px
+    rgba(255,105,180,.4);
+}
+
+/* ====================================
+   PASSWORD PAGE
+==================================== */
+
+#passwordPage{
+
+    background:
+    linear-gradient(
+        180deg,
+        #0b1026,
+        #1a2450,
+        #2d3f7c
+    );
+}
+
+/* ====================================
+   NIGHT SKY
+==================================== */
+
+.night-sky{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+}
+
+.stars{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background:
+    radial-gradient(
+        white 1px,
+        transparent 1px
+    );
+
+    background-size:
+    50px 50px;
+
+    opacity:.35;
+
+    animation:
+    twinkle 4s infinite;
+}
+
+@keyframes twinkle{
+
+    0%{
+        opacity:.2;
+    }
+
+    50%{
+        opacity:.6;
+    }
+
+    100%{
+        opacity:.2;
+    }
+}
+/* ====================================
+   CANDLE PAGE
+==================================== */
+
+#candlePage{
+
+    background:
+    linear-gradient(
+        180deg,
+        #1b0f2b,
+        #2e1b47,
+        #4c2d73
+    );
+
+    color:white;
+}
+
+.festival-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+}
+
+/* ====================================
+   LANTERNS
+==================================== */
+
+.lantern{
+
+    position:absolute;
+
+    width:60px;
+    height:80px;
+
+    background:
+    linear-gradient(
+        #ffd166,
+        #ff9f1c
+    );
+
+    border-radius:15px;
+
+    box-shadow:
+    0 0 25px
+    rgba(255,209,102,.8);
+
+    animation:
+    floatLantern 4s ease-in-out infinite;
+}
+
+.lantern1{
+    top:15%;
+    left:15%;
+}
+
+.lantern2{
+    top:10%;
+    right:20%;
+}
+
+.lantern3{
+    bottom:20%;
+    left:10%;
+}
+
+@keyframes floatLantern{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* ====================================
+   CANDLES
+==================================== */
+
+.candles{
+
+    display:flex;
+
+    gap:50px;
+
+    margin-top:40px;
+
+    z-index:5;
+}
+
+.candle{
+
+    width:60px;
+
+    height:180px;
+
+    background:
+    linear-gradient(
+        #ffb3d9,
+        #ff69b4
+    );
+
+    border-radius:12px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.candle:hover{
+
+    transform:
+    translateY(-10px);
+}
+
+.flame{
+
+    position:absolute;
+
+    width:25px;
+    height:40px;
+
+    top:-30px;
+    left:50%;
+
+    transform:
+    translateX(-50%);
+
+    background:
+    radial-gradient(
+        #fff8a6,
+        #ffb703
+    );
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 25px
+    rgba(255,183,3,.8);
+
+    animation:
+    flicker .4s infinite alternate;
+}
+
+@keyframes flicker{
+
+    from{
+        transform:
+        translateX(-50%)
+        scale(1);
+    }
+
+    to{
+        transform:
+        translateX(-50%)
+        scale(1.15);
+    }
+}
+
+/* ====================================
+   MEMORY PAGE
+==================================== */
+
+#memoryPage{
+
+    background:black;
+}
+
+.photo-container{
+
+    width:100%;
+    height:100vh;
+
+    position:relative;
+}
+
+#memoryPhoto{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+@keyframes photoTransition{
+
+    0%{
+        opacity:0;
+        transform:scale(1.08);
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    85%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:scale(1);
+    }
+}
+
+#typewriterText{
+
+    min-height:120px;
+
+    line-height:1.8;
+
+    white-space:pre-wrap;
+
+    font-size:1.05rem;
+}
+
+/* ====================================
+   BALLOON PAGE
+==================================== */
+
+#balloonPage{
+    background:
+    linear-gradient(
+        180deg,
+        #87ceeb,
+        #ffd6f5
+    );
+
+    color:white;
+}
+
+#balloonContainer{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+
+    pointer-events: none;   /* ADD THIS */
+}
+
+/* ADD THIS ENTIRE BLOCK */
+#balloonPage button{
+    position: relative;
+    z-index: 10000;
+}
+
+.balloon{
+    position:absolute;
+    bottom:-150px;
+    font-size:50px;
+    animation:
+    riseBalloon 8s linear forwards;
+}
+
+/* ====================================
+   CAKE PAGE
+==================================== */
+
+#cakePage{
+
+    background:
+    linear-gradient(
+        180deg,
+        #ff9a9e,
+        #fad0c4
+    );
+
+    color:white;
+}
+
+.cake{
+    position:relative;
+    width:250px;
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+    z-index:10000;
+}
+
+#wholeCake{
+    font-size:180px;
+}
+
+.cake-piece{
+    position:absolute;
+    font-size:70px;
+    transition:1s ease;
+}
+
+.p1{ transform:translate(0,-90px); }
+.p2{ transform:translate(78px,-45px); }
+.p3{ transform:translate(78px,45px); }
+.p4{ transform:translate(0,90px); }
+.p5{ transform:translate(-78px,45px); }
+.p6{ transform:translate(-78px,-45px); }
+
+.party-background{
+
+    position:absolute;
+
+    inset:0;
+}
+
+#confettiContainer{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+}
+
+#confettiContainer{
+    pointer-events: none;
+}
+
+.confetti{
+
+    position:absolute;
+
+    width:10px;
+    height:10px;
+
+    animation:
+    confettiFall 4s linear forwards;
+}
+
+
+@keyframes confettiFall{
+
+    from{
+        transform:
+        translateY(-50px)
+        rotate(0deg);
+    }
+
+    to{
+        transform:
+        translateY(110vh)
+        rotate(720deg);
+    }
+}
+
+/* ====================================
+   LETTER PAGE
+==================================== */
+
+#letterPage{
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffe5ec,
+        #ffd6f5,
+        #fff1f7
+    );
+}
+
+.letter-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+}
+
+.letter-card{
+
+    width:90%;
+    max-width:700px;
+
+    padding:40px;
+
+    background:white;
+
+    border-radius:25px;
+
+    color:#444;
+
+    box-shadow:
+    0 10px 30px
+    rgba(0,0,0,.15);
+
+    animation:
+    letterOpen 1s ease;
+}
+
+@keyframes letterOpen{
+
+    from{
+        opacity:0;
+        transform:
+        scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        scale(1);
+    }
+}
+
+#birthdayLetter{
+
+    margin-top:20px;
+
+    line-height:1.9;
+
+    min-height:200px;
+
+    white-space:pre-wrap;
+}
+
+/* ====================================
+   THANK YOU PAGE
+==================================== */
+
+#thankPage{
+
+    background:
+    linear-gradient(
+        180deg,
+        #ffb6c1,
+        #ffd6f5,
+        #fff5e6
+    );
+}
+
+.thank-text{
+
+    line-height:2;
+
+    color:white;
+}
+
+.sunset-background{
+
+    position:absolute;
+
+    inset:0;
+}
+
+.sun-glow{
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    border-radius:50%;
+
+    background:
+    rgba(255,255,255,.25);
+
+    filter:blur(50px);
+
+    bottom:-50px;
+    left:50%;
+
+    transform:
+    translateX(-50%);
+}
+/* ====================================
+   POPUPS
+==================================== */
+
+.popup{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    rgba(0,0,0,.6);
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.popup-card{
+
+    width:90%;
+    max-width:500px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    background:white;
+
+    text-align:center;
+
+    color:#444;
+
+    animation:
+    popupShow .4s ease;
+}
+
+.wish-card{
+
+    background:
+    linear-gradient(
+        135deg,
+        #ffe5ec,
+        #ffd6f5
+    );
+}
+
+@keyframes popupShow{
+
+    from{
+        opacity:0;
+        transform:
+        scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:
+        scale(1);
+    }
+}
+
+/* ====================================
+   SAKURA PETALS
+==================================== */
+
+.petal{
+
+    position:absolute;
+
+    top:-50px;
+
+    pointer-events:none;
+
+    animation:
+    fall linear forwards;
+}
+
+@keyframes fall{
+
+    from{
+        transform:
+        translateY(0)
+        rotate(0deg);
+    }
+
+    to{
+        transform:
+        translateY(110vh)
+        rotate(360deg);
+    }
+}
+
+.memoryFlower{
+    position: fixed;
+    top: -50px;
+    pointer-events: none;
+    z-index: 5;
+    animation: memoryFlowerFall linear forwards;
+}
+
+@keyframes memoryFlowerFall{
+    from{
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    to{
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ====================================
+   HEARTS
+==================================== */
+
+.heart{
+
+    position:absolute;
+
+    color:#ff69b4;
+
+    animation:
+    floatHeart 5s linear forwards;
+}
+
+@keyframes floatHeart{
+
+    from{
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+
+    to{
+        opacity:0;
+
+        transform:
+        translateY(-300px);
+    }
+}
+
+/* ====================================
+   SPARKLES
+==================================== */
+
+.sparkle{
+
+    position:absolute;
+
+    color:white;
+
+    animation:
+    sparkleAnim 3s linear forwards;
+}
+
+@keyframes sparkleAnim{
+
+    from{
+        opacity:0;
+        transform:scale(.5);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.2);
+    }
+
+    to{
+        opacity:0;
+        transform:scale(.5);
+    }
+}
+
+/* ====================================
+   FLOATING CONTAINERS
+==================================== */
+
+#floatingBalloons,
+#floatingHearts,
+#floatingSparkles,
+#floatingPetals,
+#sakuraContainer,
+#sparkleContainer,
+#heartContainer{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1;
+}
+
+/* ====================================
+   FOOTER
+==================================== */
+
+.credits{
+
+    position:fixed;
+
+    bottom:10px;
+
+    left:50%;
+
+    transform:
+    translateX(-50%);
+
+    color:white;
+
+    font-size:.9rem;
+
+    z-index:100;
+}
+
+/* ====================================
+   CONTINUE BUTTON FIX
+==================================== */
+
+#continueToMemories{
+    position: relative;
+    z-index: 10000;
+    pointer-events: auto;
+}
+
+/* ====================================
+   SCROLLBAR
+==================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff69b4;
+
+    border-radius:10px;
+}
+
+/* ====================================
+   MOBILE RESPONSIVE
+==================================== */
+
+@media(max-width:768px){
+
+    .glass-card{
+
+        width:95%;
+
+        padding:25px;
+    }
+
+    .candles{
+
+        gap:25px;
+    }
+
+    .candle{
+
+        width:45px;
+
+        height:140px;
+    }
+
+    .cake{
+
+        font-size:120px;
+    }
+
+    .memory-card{
+
+        width:92%;
+
+        padding:20px;
+    }
+
+    #typewriterText{
+
+        font-size:.95rem;
+    }
+
+    .letter-card{
+
+        width:95%;
+
+        padding:25px;
+    }
+
+    h1{
+
+        font-size:1.7rem;
+    }
+
+    button{
+
+        padding:
+        10px 22px;
+    }
+}
+
+@media(max-width:480px){
+
+    .cake{
+        font-size:100px;
+    }
+
+    .glass-card h1{
+        font-size:1.5rem;
+    }
+
+    #typewriterText{
+        font-size:.9rem;
+    }
+
+    .thank-text{
+        font-size:.95rem;
+    }
+}

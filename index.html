@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday 🌸</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+    <!-- MUSIC -->
+
+    <audio id="bgMusic" loop>
+        <source src="music/piano.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- PARTICLE CONTAINERS -->
+
+    <div id="sakuraContainer"></div>
+    <div id="sparkleContainer"></div>
+    <div id="heartContainer"></div>
+
+    <!-- PASSWORD PAGE -->
+
+    <section id="passwordPage"
+             class="page active">
+
+        <div class="night-sky">
+            <div class="stars"></div>
+        </div>
+
+        <div class="glass-card">
+
+            <h1>
+                🌸 Birthday Surprise 🌸
+            </h1>
+
+            <p class="subtitle">
+                Enter The Secret Date
+            </p>
+
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="DDMMYYYY">
+
+            <button
+                onclick="checkPassword()">
+
+                Unlock ✨
+
+            </button>
+
+            <p id="errorText"></p>
+
+        </div>
+
+    </section>
+
+    <!-- CANDLE PAGE -->
+
+    <section id="candlePage"
+             class="page">
+
+        <div class="festival-bg">
+
+            <div class="lantern lantern1"></div>
+            <div class="lantern lantern2"></div>
+            <div class="lantern lantern3"></div>
+
+        </div>
+
+        <h1>
+            🕯️ Three Special Wishes 🕯️
+        </h1>
+
+        <p>
+            Tap each candle to reveal a wish 💖
+        </p>
+
+        <div class="candles">
+
+            <div class="candle"
+                 onclick="blowCandle(0)">
+
+                <div class="flame"></div>
+
+            </div>
+
+            <div class="candle"
+                 onclick="blowCandle(1)">
+
+                <div class="flame"></div>
+
+            </div>
+
+            <div class="candle"
+                 onclick="blowCandle(2)">
+
+                <div class="flame"></div>
+
+            </div>
+
+        </div>
+
+        <button
+            id="continueToMemories"
+            class="hidden"
+            onclick="startMemories()">
+
+            Continue 📸
+
+        </button>
+
+    </section>
+
+    <!-- MEMORY PAGE -->
+
+    <section id="memoryPage"
+             class="page">
+
+        <div class="photo-container">
+
+            <img
+                id="memoryPhoto"
+                src=""
+                alt="Memory">
+
+            <div class="memory-overlay"></div>
+
+        </div>
+
+    </section>
+        <!-- BALLOON CELEBRATION PAGE -->
+
+    <section id="balloonPage"
+             class="page">
+
+        <div class="balloon-background">
+
+            <div id="balloonContainer">
+
+            </div>
+
+        </div>
+
+        <h1>
+            🎈 Celebration Time 🎈
+        </h1>
+
+        <p>
+            A sky full of happiness just for you 💖
+        </p>
+
+        <button onclick="openCakePage()">
+            Continue 🎂
+        </button>
+
+    </section>
+
+    <!-- CAKE PAGE -->
+
+    <section id="cakePage"
+             class="page">
+
+        <div class="party-background">
+
+            <div id="confettiContainer"></div>
+
+        </div>
+
+        <h1>
+            🎂 Cut The Birthday Cake 🎂
+        </h1>
+
+        <p>
+            Tap the cake to celebrate ✨
+        </p>
+
+        <div class="cake" onclick="cutCake()">
+
+            <div id="wholeCake">🎂</div>
+
+            <div class="cake-piece p1 hidden">🍰</div>
+            <div class="cake-piece p2 hidden">🍰</div>
+            <div class="cake-piece p3 hidden">🍰</div>
+            <div class="cake-piece p4 hidden">🍰</div>
+            <div class="cake-piece p5 hidden">🍰</div>
+            <div class="cake-piece p6 hidden">🍰</div>
+
+        </div>
+
+    </section>
+
+    <!-- BIRTHDAY LETTER PAGE -->
+
+    <section id="letterPage"
+             class="page">
+
+        <div class="letter-wrapper">
+
+            <div class="envelope">
+
+                <div class="letter-card">
+
+                    <h1>
+                        💌 A Special Message 💌
+                    </h1>
+
+                    <div id="birthdayLetter">
+
+                    </div>
+
+                    <button
+                        onclick="openThankYouPage()">
+
+                        Continue 🌸
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- THANK YOU PAGE -->
+
+    <section id="thankPage"
+             class="page">
+
+        <div class="sunset-background">
+
+            <div class="sun-glow"></div>
+
+        </div>
+
+        <div class="glass-card">
+
+            <h1>
+                🌷 Thank You 🌷
+            </h1>
+
+            <p class="thank-text">
+
+                Thank you for taking this
+                journey through wishes,
+                memories, laughter,
+                and love. 💖
+
+                <br><br>
+
+                Every memory shared,
+                every smile captured,
+                and every dream wished
+                makes life more beautiful. ✨
+
+                <br><br>
+
+                Happy Birthday once again! 🎂🎈🌸
+
+            </p>
+
+            <button onclick="location.reload()">
+                Replay Journey ✨
+            </button>
+
+        </div>
+
+    </section>
+        <!-- POPUP SYSTEM -->
+
+    <div id="popup"
+         class="popup hidden">
+
+        <div class="popup-card">
+
+            <h2 id="popupTitle">
+                ✨ Message ✨
+            </h2>
+
+            <div id="popupText">
+
+            </div>
+
+            <button onclick="closePopup()">
+                Close 🌸
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- WISH POPUP -->
+
+    <div id="wishPopup"
+         class="popup hidden">
+
+        <div class="popup-card wish-card">
+
+            <h2 id="wishTitle">
+                🕯️ Special Wish
+            </h2>
+
+            <div id="wishContent">
+
+            </div>
+
+            <button onclick="closeWishPopup()">
+                Continue 💖
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- CAKE MESSAGE POPUP -->
+
+    <div id="cakePopup"
+         class="popup hidden">
+
+        <div class="popup-card">
+
+            <h2>
+                🎂 Happy Birthday 🎂
+            </h2>
+
+            <div id="cakeMessageText">
+
+            </div>
+
+            <button onclick="closeCakePopup()">
+                Continue 💌
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- FLOATING DECORATION CONTAINERS -->
+
+    <div id="floatingBalloons"></div>
+
+    <div id="floatingHearts"></div>
+
+    <div id="floatingSparkles"></div>
+
+    <div id="floatingPetals"></div>
+
+    <!-- LOADER -->
+
+    <div id="loader"
+         class="hidden">
+
+        <div class="loader-content">
+
+            <h2>
+                🌸 Loading Memories 🌸
+            </h2>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer class="credits">
+
+        <p>
+            Made with ❤️ by Subhradeep
+        </p>
+
+    </footer>
+
+    <!-- CONFIG FILE -->
+
+    <script src="config.js"></script>
+
+    <!-- MAIN SCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
